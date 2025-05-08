@@ -1,0 +1,22 @@
+package javaapplication5;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class JavaApplication5 {
+
+    public static void main(String[] args) {
+      Scanner ler = new Scanner (System.in);
+      DecimalFormat decimal = new DecimalFormat ("0.00");
+      int[] v= new int[10];
+      int i, cm100=0;
+      for (i=0;i < v.length; i++){
+          System.out.println("Digite um número");
+          v[i] = ler.nextInt();
+          if(v[i] >100){
+             cm100++ ;
+          }
+      } 
+        System.out.println("O vetor possui "+ cm100 + " valores maiores que 100");
+    }
+}
