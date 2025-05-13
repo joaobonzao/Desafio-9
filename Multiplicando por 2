@@ -1,0 +1,22 @@
+package javaapplication6;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        int[] v = new int[10];
+        int i, mult = 0;
+        for (i = 0; i < v.length; i++) {
+            System.out.println("Digite o " + (i + 1) + "º número: ");
+            v[i] = ler.nextInt();
+            mult = v[i] * 2;
+            System.out.println("O resultado dos números multiplicados por 2 é:" + mult);
+            System.out.println("");
+        }
+        
+    }
+}
