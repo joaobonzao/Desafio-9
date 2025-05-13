@@ -1,0 +1,22 @@
+package javaapplication6;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        int[] v = new int[10];
+        double soma = 0;
+        double media;
+        for (int i = 0; i < v.length; i++) {
+            System.out.println("Digite o " + (i + 1) + "º número: ");
+            v[i] = ler.nextInt();
+            soma += v[i];
+        }
+           media = soma / v.length;
+           System.out.println("A média dos números digitados é: " + decimal.format(media));
+    }
+}
