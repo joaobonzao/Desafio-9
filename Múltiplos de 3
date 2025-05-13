@@ -1,0 +1,34 @@
+package javaapplication6;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        int[] v = new int[10];
+        for (int i = 0; i < v.length; i++) {
+            System.out.println("Digite o " + (i + 1) + "º número: ");
+            v[i] = ler.nextInt();
+        }
+        ArrayList<Integer> multiplosDeTres = new ArrayList<>();
+
+        // Verificando os múltiplos de 3
+        int i;
+        for (i = 0; i < v.length; i++) {
+            if (v[i] % 3 == 0) {
+                multiplosDeTres.add(v[i]);
+            }
+        }
+
+        // Exibindo o novo vetor com múltiplos de 3
+        System.out.println("Valores múltiplos de 3:");
+            for (int num : multiplosDeTres) {
+                System.out.println(num);
+            }
+        
+    }
+}
