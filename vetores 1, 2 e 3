@@ -1,0 +1,47 @@
+package javaapplication6;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        int[] v1 = new int[10];
+        int[] v2 = new int[10];
+
+        System.out.println("Insira a primeira lista de 10 números:");
+        for (int i = 0; i < v1.length; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número: ");
+            v1[i] = ler.nextInt();
+        }
+
+        System.out.println("Insira a segunda lista de 10 números:");
+        for (int i = 0; i < v2.length; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número: ");
+            v2[i] = ler.nextInt();
+        }
+
+        ArrayList<Integer> v3 = new ArrayList<>();
+
+        
+        for (int i = 0; i < v1.length; i++) {
+            if (v1[i] > v2[i]) {
+                v3.add(v1[i]);
+            } else if (v2[i] > v1[i]) {
+                v3.add(v2[i]);
+            } else {
+                
+                v3.add(v1[i]);
+            }
+        }
+
+        
+        System.out.println("Valores maiores de cada posição:");
+        for (int num : v3) {
+            System.out.println(num);
+        }
+    }
+}
