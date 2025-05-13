@@ -1,0 +1,23 @@
+package javaapplication6;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        int[] v = new int[10];
+        int num5 = 0;
+        for (int i = 0; i < v.length; i++) {
+            System.out.println("Digite o " + (i + 1) + "º número: ");
+            v[i] = ler.nextInt();
+            if(v[i] == 5){
+                num5 ++;
+            }
+        }
+          
+           System.out.println("Quantidade de números 5: " + num5 );
+    }
+}
